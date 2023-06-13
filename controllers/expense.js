@@ -106,7 +106,7 @@ const downloadExpenses =  async (req, res) => {
 
     const fileUrl = await S3Service.uploadToS3(stringifiedExpenses, filename);
     console.log(fileUrl);
-    res.status(200).json({ fileUrl: fileUrl, success: true });
+   // res.status(200).json({ fileUrl: fileUrl, success: true });
     await Download.create({
       fileUrl: fileUrl,
       downloadDate: new Date(),
@@ -114,11 +114,11 @@ const downloadExpenses =  async (req, res) => {
     });
 
     // Return the file URL in the response
-    res.status(202).json({ fileUrl: fileUrl, success: true });
+    res.status(200).json({ fileUrl: fileUrl, success: true });
   } catch (err) {
     console.log(err);
     // Handle the error and send an appropriate response
-    res.status(500).json({ fileUrl: '', success: false, error: err.message });
+    res.status(200).json({ fileUrl: '', success: false, error: err.message });
   }
 };
 
