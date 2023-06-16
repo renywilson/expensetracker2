@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color:white;
+               
+                border:3px solid rgb(29, 27, 24);
+                position:relative;
+                top:2px;
+                left:265px;
+                width:615px;
+                padding:6px;
+
+            }
+            header {
+                text-align: center;
+                background: #f4f4f4;
+                padding:1rem;
+                font-size: large;
+
+            }
+            #myform {
+                background: #f4f4f4;
+                padding:2rem;
+                
+            }
+            #myform label{
+                display:block ;
+            }
+            .container {
+                margin: auto;
+                width:615px;
+                background: #7e7878;
+            }
+        </style>
+        <title>USER REGISTRATION</title>
+    </head>
+    <body>
+        <header> </header>
+        <section class="container" >
+        <form id="myform">
+         <h1>Login ....</h1>
+            <div class="msg"></div>
+            <div>
+            
+            <label for="email">Enter Email:</label>
+            <input type="email" id="email" required>
+            
+                <label for="password">Enter password:</label>
+                <input type="password" id="password" required>
+                </div>
+            </div>
+            <input class="btn" type="submit" value="Login">
+            <button onclick="forgotpassword()"> Forgot password</button>
+        <a href="./signup.html">New User....signupnow</a>
+        </form>
+       
+    </section>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="login.js"></script> 
+</html>
